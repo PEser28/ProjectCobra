@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>New Resident Form</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="dist/css/sb-admin-3.css" rel="stylesheet">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+ <!-- Main Sidebar Container -->
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="index3.html" class="brand-link">
+    <img src="dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+         style="opacity: .8">
+    <span class="brand-text font-weight-light">BARANGAY XYZ</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item has-treeview menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            
+          </ul>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-edit"></i>
+            <p>
+              Resident Information
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="pages/forms/register.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>New Resident</p>
+              </a>
+            </li>
+
+
+
+
+
+
+            <li class="nav-item">
+              <a href="pages/forms/general.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>General Elements</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/forms/advanced.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Advanced Elements</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/forms/editors.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Editors</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/forms/validation.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Validation</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-table"></i>
+            <p>
+              Tables
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="pages/tables/simple.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Simple Tables</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/tables/data.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>DataTables</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/tables/jsgrid.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>jsGrid</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-header">EXAMPLES</li>
+        <li class="nav-item">
+          <a href="pages/calendar.html" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p>
+              Calendar
+              <span class="badge badge-info right">2</span>
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pages/gallery.html" class="nav-link">
+            <i class="nav-icon far fa-image"></i>
+            <p>
+              Gallery
+            </p>
+          </a>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon far fa-envelope"></i>
+            <p>
+              Mailbox
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="pages/mailbox/mailbox.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Inbox</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/mailbox/compose.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Compose</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/mailbox/read-mail.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Read</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-book"></i>
+            <p>
+              Pages
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="pages/examples/invoice.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Invoice</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/profile.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Profile</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/e-commerce.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>E-commerce</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/projects.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Projects</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/project-add.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Project Add</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/project-edit.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Project Edit</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/project-detail.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Project Detail</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/contacts.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Contacts</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon far fa-plus-square"></i>
+            <p>
+              Extras
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="pages/examples/login.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Login</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/register.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Register</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/forgot-password.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Forgot Password</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/recover-password.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recover Password</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/lockscreen.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lockscreen</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/legacy-user-menu.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Legacy User Menu</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/language-menu.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Language Menu</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/404.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Error 404</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/500.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Error 500</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/pace.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pace</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/blank.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Blank Page</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="starter.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Starter Page</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-header">MISCELLANEOUS</li>
+        <li class="nav-item">
+          <a href="https://adminlte.io/docs/3.0" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>Documentation</p>
+          </a>
+        </li>
+        <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fas fa-circle nav-icon"></i>
+            <p>Level 1</p>
+          </a>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-circle"></i>
+            <p>
+              Level 1
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Level 2</p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  Level 2
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>Level 3</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>Level 3</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>Level 3</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Level 2</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fas fa-circle nav-icon"></i>
+            <p>Level 1</p>
+          </a>
+        </li>
+        <li class="nav-header">LABELS</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon far fa-circle text-danger"></i>
+            <p class="text">Important</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon far fa-circle text-warning"></i>
+            <p>Warning</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon far fa-circle text-info"></i>
+            <p>Informational</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+      
+      
+
+  <div class="container">
+
+    <div class="card o-hidden border-0 shadow-lg my-5" style="width: 80%; margin-left: 80px;">
+      <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        
+        </div>
+        <div class="p-5">
+          <div class="text-center">
+          <h1 class="text-gray-900">New Resident Registration Form</h1>
+          </div>
+
+          <div class="text-center">
+            <h1 class="h4 text-gray-900 mb-4">Basic Information</h1>
+            </div>
+
+          <form class="user">
+            <div class="form-group row">
+              <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Family Name
+                <input type="text" class="form-control form-control-user" name="LastName" id="LastName" placeholder="Family Name" autocomplete="off">
+              </div>
+
+              <div class="text-gray-900 col-sm-6">First Name
+                <input type="text" class="form-control form-control-user" name="FirstName" id="FirstName" placeholder="First Name" autocomplete="off">
+              </div>
+
+            </div>
+
+            <div class="form-group row">
+            <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Middle Name
+              <input type="text" class="form-control form-control-user" name="MiddleName" id="MiddleName" placeholder="Middle Name" autocomplete="off">
+            </div>
+
+            <div class="text-gray-900 col-sm-6">Alias
+              <input type="text" class="form-control form-control-user" name="Alias" id="Alias" placeholder="Alias or Nickname" autocomplete="off">
+            </div>
+            </div>
+
+            <div class="form-group row">
+            <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Mobile Number
+              <input type="text" class="form-control form-control-user" name="MobileM" id="MobileM" placeholder="Mobile Number" autocomplete="off">
+            </div>
+            
+            <div class="text-gray-900 col-sm-6">Birth Place
+              <input type="text" class="form-control form-control-user" name="PlaceBirth" id="PlaceBirth" placeholder="Place of Birth" autocomplete="off"> 
+            </div>
+            </div>
+
+            <div class="form-group row">
+            <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Nationality
+              <input type="text" class="form-control form-control-user" name="Nationality" id="Nationality" placeholder="Nationality" autocomplete="off">
+            </div>
+
+            <div class="text-gray-900 col-sm-6">Religion / Belief
+              <input type="text" class="form-control form-control-user" name="Religion" id="Religion" placeholder="Religion / Belief" autocomplete="off">
+            </div>
+          </div>
+    
+          <div class="form-group row">
+            <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Occupation:<br>
+						<select name="occupation" style="margin-top: 10px; margin-left: -0.1%" id = "occupation" name = "occupation"> 
+							<option value="1">Private</option>
+							<option value="2">Public</option>
+							<option value="3">Government</option>
+              <option value="4">Unemployed</option>
+              <option value="5">Out of School Youth (OSY)</option>
+							<option value="6">Out of School Children (OSC)</option>
+							<option value="7">Person with Disability (PWD)</option>
+              <option value="8">Senior Citizen (SC)</option>
+              <option value="9">Overseas Filipino Worker (OFW)</option>
+							<option value="10">Solo Parent</option>
+							<option value="11">Indigenous People (IP)</option>
+							<option value="12">Others</option>
+						</select>
+            </div>
+
+            <div class="text-gray-900 col-sm-6">Birthdate:<br>
+            <input type="date" style="margin-left: 1px; margin-top: 5px;" id = "bdate" name = "bdate" >
+						</div>
+            </div>
+
+            <div class="form-group row">
+              <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Sex:<br>
+              <select name="sex" id = "sex" style="margin-top: 5px; margin-left: -0.1%"> 
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+              </div>
+
+              <div class="text-gray-900 col-sm-6">Civil Status:<br>
+              <select name="cvstatus"id = "cvstatus" style="margin-left: 1px; margin-top: 5px;"> 
+                <option value="1">Single</option>
+                <option value="2">Married</option>
+                <option value="1">Separated</option>
+                <option value="2">Widowed</option>
+              </select>
+              </div>
+              </div>
+
+              <div class="text-gray-900 form-group">Face Marks
+                <input type="email" class="form-control form-control-user" name ="facemark" id="facemark" placeholder="Face Marks" autocomplete="off">
+              </div>
+
+
+              <div class="form-group row">
+                <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Spouse's Name
+                <input type="email" class="form-control form-control-user" name ="spName" id="spName" placeholder="Name" autocomplete="off">
+              </div>
+
+              <div class="text-gray-900 col-sm-6">Spouse's Occupation
+                <input type="email" class="form-control form-control-user" name ="spOccu" id="spOccu" placeholder="Occupation" autocomplete="off">
+              </div>
+              </div>
+
+              <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-4">Contact Information</h1>
+              </div>
+
+              <div class="text-gray-900 form-group" style="margin-top: -15px;">City Address
+                <input type="email" class="form-control form-control-user" name ="cityAdd" id="cityAdd" placeholder="Enter Address" autocomplete="off">
+              </div>
+
+              <div class="text-gray-900 form-group">Provincial Address
+                <input type="email" class="form-control form-control-user" name ="provAdd" id="provAdd" placeholder="Enter Address" autocomplete="off">
+              </div>
+
+
+              <div class="form-group row">
+                <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">House Number 1
+                <input type="email" class="form-control form-control-user" name ="House1" id="House1" placeholder="Enter Number" autocomplete="off">
+              </div>
+
+              <div class="text-gray-900 col-sm-6">House Number 2
+                <input type="email" class="form-control form-control-user" name ="House2" id="House2" placeholder="Enter Number" autocomplete="off">
+              </div>
+              </div>
+
+
+              <div class="form-group row">
+                <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Mobile Number 1
+                <input type="email" class="form-control form-control-user" name ="Mobile1" id="Mobile1" placeholder="Enter Number" autocomplete="off">
+              </div>
+
+              <div class="text-gray-900 col-sm-6">Mobile Number 2
+                <input type="email" class="form-control form-control-user" name ="Mobile2" id="Mobile2" placeholder="Enter Number" autocomplete="off">
+              </div>
+              </div>
+
+              <div class="text-gray-900 form-group">Email Address
+                <input type="email" class="form-control form-control-user" name="EmailAdd" id="EmailAdd" placeholder="Enter Email Address" autocomplete="off">
+              </div>
+
+
+              <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Registration Details</h1>
+                </div>
+
+
+                <div class="form-group row">
+                  <div class="text-gray-900 col-sm-6 mb-3 mb-sm-0">Resident Type:<br>
+                  <select name="rType" id = "rType" style="margin-top: 5px; margin-left: -0.1%"> 
+                    <option value="1">Native</option>
+                    <option value="2">Rentee</option>
+                  </select>
+                  </div>
+    
+                  <div class="text-gray-900 col-sm-6">Resident Status:<br>
+                  <select name="rStat"id = "rStat" style="margin-left: 1px; margin-top: 5px;"> 
+                    <option value="1">Active</option>
+                    <option value="2">Inactive</option>
+                    <option value="1">Deceased</option>
+                  </select>
+                  </div>
+                  </div>
+
+
+
+            <a href="login.html" class="btn btn-primary btn-user btn-block">
+              Save New Resident
+            </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
