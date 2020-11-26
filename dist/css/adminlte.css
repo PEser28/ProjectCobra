@@ -4782,7 +4782,10 @@ input[type="button"].btn-block {
   background-color: #ffffff;
   background-clip: border-box;
   border: 0 solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 3%;
+  width: 500px;
+  height: 350px;
+  margin-left: -100px
 }
 
 .card > hr {
@@ -4805,6 +4808,7 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  border-radius: 50%;
 }
 
 .card-title {
@@ -20330,6 +20334,7 @@ html.maximized-card {
   height: 100vh;
   -ms-flex-pack: center;
   justify-content: center;
+  background-color: #1386D6;
 }
 
 .login-box,
