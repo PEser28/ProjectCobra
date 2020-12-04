@@ -22,25 +22,26 @@
 <div class="login-box">
   
   <!-- /.login-logo -->
-  <div class="card">
+  <div class="card" >
     <div class="card-body login-card-body">
       <div class="login-logo">
         <img src="logo.png" class="brand-image img-circle elevation-3" style="width: 50px; height: 50px;">
-        <a href="../../index1.html"><b>BARANGAY</b>XYZ</a>
+        <a><b>BARANGAY</b>XYZ</a>
       </div>
       <p class="login-box-msg">Welcome!</p>
       
-      <form action="../../index1.html" method="post">
+      <form  action = "LOGIN.php" method = "POST" >
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="username">
+          <input type="text" class="form-control" placeholder="username" id="username" name="username" autocomplete="off">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fa fa-user"></span>
             </div>
           </div>
         </div>
+
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="password">
+          <input type="password" class="form-control" placeholder="password" id="password" name="password"  autocomplete="off">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fa fa-key"></span>
@@ -54,7 +55,7 @@
 
           <div class="col-4">
             <br>
-            <a href="index1.html" type="button" class="btn btn-block btn-outline-primary btn-sm" style="width: 300px; height: 40px; margin-left: -240px; border-radius: 30px;">Sign In</a>
+            <input type="submit" name="logup" id="logup" value="Login" class="submit" class="btn btn-block btn-outline-primary btn-sm" style="width: 300px; height: 40px; margin-left: -240px; border-radius: 30px;">
           </div>
           <!-- /.col -->
         </div>
