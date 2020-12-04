@@ -2690,21 +2690,21 @@ fieldset:disabled a.btn {
 
 .btn-info {
   color: #ffffff;
-  background-color: #17a2b8;
-  border-color: #17a2b8;
+  background-color: #007aff;
+  border-color: #007aff;
   box-shadow: none;
 }
 
 .btn-info:hover {
   color: #ffffff;
-  background-color: #138496;
-  border-color: #117a8b;
+  background-color: #0069d9;
+  border-color: #0069d9;
 }
 
 .btn-info:focus, .btn-info.focus {
   color: #ffffff;
-  background-color: #138496;
-  border-color: #117a8b;
+  background-color: #0069d9;
+  border-color: #0069d9;
   box-shadow: none, 0 0 0 0 rgba(58, 176, 195, 0.5);
 }
 
@@ -28683,7 +28683,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .bg-gradient-info.btn:hover {
-  background: #138496 linear-gradient(180deg, #3697a6, #138496) repeat-x !important;
+  background: #0069d9 linear-gradient(180deg, #3697a6, #0069d9) repeat-x !important;
 }
 
 .bg-gradient-info.btn:not(:disabled):not(.disabled):active, .bg-gradient-info.btn:not(:disabled):not(.disabled).active, .bg-gradient-info.btn:active, .bg-gradient-info.btn.active {
@@ -29303,7 +29303,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .bg-gradient-cyan.btn:hover {
-  background: #138496 linear-gradient(180deg, #3697a6, #138496) repeat-x !important;
+  background: #0069d9 linear-gradient(180deg, #3697a6, #0069d9) repeat-x !important;
 }
 
 .bg-gradient-cyan.btn:not(:disabled):not(.disabled):active, .bg-gradient-cyan.btn:not(:disabled):not(.disabled).active, .bg-gradient-cyan.btn:active, .bg-gradient-cyan.btn.active {
