@@ -2,11 +2,11 @@
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$dbname = "Database";
+$dbname = "AdminDB";
 
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=Database", $db_username, $db_password);
+  $conn = new PDO("mysql:host=$servername;dbname=AdminDB", $db_username, $db_password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
