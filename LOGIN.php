@@ -15,7 +15,7 @@ try {
 
 	if(isset($_POST['logup'])){
 
-        if($email == "admin" and $password == "password") {
+        if($results['username'] == $email and $results['password'] == $password) {
             header("Location: ../PROJECTCOBRA/index1.html");
         
         }
@@ -48,7 +48,7 @@ try {
             </script>';
         }
         
-        else if ($email != "admin" and $password != "password"){
+        else if ($email != $results['username'] and $password != $results['password']){
             echo '<script>
                 alert ("wrong username and password");
             </script>';
@@ -57,7 +57,7 @@ try {
         </script>';
 
         }
-        else if ($email != "admin") {
+        else if ($email != $results['username']) {
             echo '<script>
                 alert ("wrong Username");
             </script>';
@@ -66,7 +66,7 @@ try {
             </script>';
         }
 
-        else if ($password != "password") {
+        else if ($password != $results['password']) {
             echo '<script>
                 alert ("wrong password");
             </script>';
