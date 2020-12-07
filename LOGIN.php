@@ -5,7 +5,7 @@ $password = $_POST['password'];
 try {
  require 'database.php';
      
-  $sql = "SELECT username, password FROM Database";
+  $sql = "SELECT username, password FROM AdminDB";
      
   // use exec() because no results are returned 
     $result = $conn->query($sql);
