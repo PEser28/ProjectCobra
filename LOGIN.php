@@ -2,6 +2,17 @@
 $email = $_POST['username'];
 $password = $_POST['password'];
 
+try {
+ require 'database.php';
+     
+  $sql = "SELECT username, password FROM Database";
+     
+  // use exec() because no results are returned 
+    $result = $conn->query($sql);
+	$results = $result->fetch();
+	
+	
+
 	if(isset($_POST['logup'])){
 
         if($email == "admin" and $password == "password") {
@@ -19,7 +30,7 @@ $password = $_POST['password'];
             </script>';
             }
 
-        elseif ($email == "") {
+        else if ($email == "") {
             echo '<script>
                 alert ("Input your Username ");
             </script>';
@@ -28,7 +39,7 @@ $password = $_POST['password'];
             </script>';
 
         }
-        elseif ($password == "") {
+        else if ($password == "") {
             echo '<script>
                 alert ("Input your Passsword");
             </script>';
@@ -55,7 +66,7 @@ $password = $_POST['password'];
             </script>';
         }
 
-        elseif ($password != "password") {
+        else if ($password != "password") {
             echo '<script>
                 alert ("wrong password");
             </script>';
@@ -66,6 +77,8 @@ $password = $_POST['password'];
 
 
     }
-	
+	} catch(PDOException $e) {
+  echo $sql . "<br>" . $e->getMessage();
+}
 	
 ?>
