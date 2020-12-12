@@ -2,51 +2,49 @@
 $username = $_POST['uname'];
 $password = $_POST['password'];
 
-  try {
- require 'database.php';
-     
-  $sql = "SELECT username, password FROM AdminDB";
-  $result = $conn->query($sql);
-  $results = $result->fetch();
-  
-if($results['username'] == $username){
-		echo '<script>
-				alert("Username is already taken");
-				</script>';
-		echo '<script>
-				window.history.go(-1);
-					</script>';
-		}		
 
-else  {
-		insertRecord($username, $password);
-       
-	}
-	
-}catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
-}
+	insertRecord($username, $password );
+
+
+
+
 
 function insertRecord($username, $password) {
- try {
- require 'database.php';
-     
-  $sql = "INSERT INTO AdminDB (username, password) VALUES (?,?)";
-     
-     
-  // use exec() because no results are returned 
-     $conn->prepare($sql)->execute([$username, $password]);
+require  "Database.php";
 
+$command = "SELECT * FROM admindb WHERE username = ?";
+$stmt = $conn->prepare($command);
+$stmt->execute([$username]);
 
-  echo '<script>
-  				alert("Congratulations, you are now registered!");
-					</script>';
-					
-} catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
+if ($stmt->rowCount() == 0){
+	try {
+ 
+		$sql = "INSERT INTO admindb (username, password ) VALUES (?,?)";
+		   
+		   
+		// use exec() because no results are returned 
+		   $conn->prepare($sql)->execute([$username, $password]);
+	  
+	  
+		echo '<script>
+						alert("Congratulations, you are now registered!");
+						  </script>';
+	  } catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	  }
+}else {
+	echo '<script>alert("Username Already Exists");</script>';
+	echo '<script>
+			window.history.go(-1);
+				</script>';
+
 }
+  
+
 
 $conn = null;
 }
+
+?>
 
 ?>
