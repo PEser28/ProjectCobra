@@ -1,7 +1,7 @@
 <?php
 
 $FamilyName = $_POST['familyname'];
-$FirstName = $_POST['firstname'];
+$FirstName = $_POST['firstName'];
 $MiddleName = $_POST['middlename'];
 $Alias = $_POST['alias'];
 $MobileNumber = $_POST['mobilenumber'];
@@ -23,7 +23,7 @@ $Email = $_POST['emd'];
 	insertRecord($FamilyName, $FirstName, $MiddleName, $Alias, $MobileNumber, $BirthPlace, $Nationality, $Religion, $Occupation, $CivilStatus, $Sex, $BirthDay, $FaceMarks, $SpouseName, $SpouseOccupation, $VoterStat, $CityAddress, $ProvinceAddress, $Email );
 
 
-function insertRecord($FamilyName, $FirstName, $MiddleName, $Alias, $MobileNumber, $BirthPlace, $Nationality, $Religion, $Occupation, $CivilStatus, $Sex, $BirthDay, $FaceMarks, $SpouseName, $SpouseOccupation, $VoterStat, $CACityAddressddress, $ProvinceAddress, $Email ) {
+function insertRecord($FamilyName, $FirstName, $MiddleName, $Alias, $MobileNumber, $BirthPlace, $Nationality, $Religion, $Occupation, $CivilStatus, $Sex, $BirthDay, $FaceMarks, $SpouseName, $SpouseOccupation, $VoterStat, $CityAddress, $ProvinceAddress, $Email ) {
 require  "Database.php";
 
 $command = "SELECT * FROM residentinfo Where FamilyName = ?";

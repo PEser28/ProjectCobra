@@ -1,6 +1,9 @@
 <?php
 require  "Database.php";
 
+
+
+
 if(isset($_POST['logup'])){
 	$username = $_POST['username'];
 	$password = $_POST['password'];
@@ -15,13 +18,11 @@ if(isset($_POST['logup'])){
 		)
 	);
 	
-	$results = $statement->fetch();
-	
 
-        if($results['username'] == $email and $results['password'] == $password) {
-            header("Location: ../PROJECTCOBRA/index1.html");
-        
-        }
+	$count = $statement->rowcount();
+	if ($count > 0 ){
+		header('Location:../PROJECTCOBRA/index1.html');
+	} else {
 
 
         if ($username == "" and $password == "") {
@@ -51,7 +52,7 @@ if(isset($_POST['logup'])){
             </script>';
         }
         
-        else if ($username != $results['username'] and $password != $results['password']){
+        else {
             echo '<script>
                 alert ("wrong username and password");
             </script>';
@@ -60,34 +61,9 @@ if(isset($_POST['logup'])){
         </script>';
 
         }
-        else if ($username != $results['username']) {
-            echo '<script>
-                alert ("wrong Username");
-            </script>';
-            echo '<script>
-                 window.history.go(-1);
-            </script>';
-        }
-
-        else if ($password != $results['password']) {
-            echo '<script>
-                alert ("wrong password");
-            </script>';
-            echo '<script>
-                 window.history.go(-1);
-            </script>';
-        }
-
-	$count = $statement->rowcount();
-	if ($count > 0 ){
-		header('Location:../PROJECTCOBRA/index1.html');
-	} else {
-		echo '<script>
-				alert("WRONG CRENDENTIAL. PLEASE TRY AGAIN");
-				window.history.go(-1);
-			</script>';
+        
 	}
 }
 
-
 ?>
+

@@ -7,6 +7,9 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -17,6 +20,7 @@
   <link rel="stylesheet" href="dist/css/logincss.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/sb-admin-3.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -33,9 +37,13 @@
       <form  action = "LOGIN.php" method = "POST" >
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="username" id="username" name="username" autocomplete="off">
+          <div class="invalid-tooltip" id="username-invalid">
+            
+           </div>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fa fa-user"></span>
+              
             </div>
           </div>
         </div>
@@ -45,6 +53,7 @@
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fa fa-key"></span>
+              
             </div>
           </div>
         </div>
@@ -55,7 +64,7 @@
 
           <div class="col-4">
             <br>
-            <input type="submit" name="logup" id="logup" value="Login" class="submit" class="btn btn-block btn-outline-primary btn-sm" style="width: 300px; height: 40px; margin-left: -240px; border-radius: 30px;">
+            <input type="submit" name="logup" id="logup" value="Login" class="submit" class="btn btn-block btn-outline-primary btn-sm" style="width: 300px; height: 40px; margin-left: -240px; border-radius: 30px;" onclick="return main()">
           </div>
           <!-- /.col -->
         </div>
@@ -63,6 +72,7 @@
 
     
       <!-- /.social-auth-links -->
+
 
       
     <!-- /.login-card-body -->
@@ -76,6 +86,7 @@
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
+<script src="../PROJECTCOBRA/tooltip.js"></script>
 
 </body>
 </html>

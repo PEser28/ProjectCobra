@@ -29,7 +29,7 @@ function main(){
    
 
     var lnameValue = document.getElementById('familyname').value;
-    var fnameValue = document.getElementById('firstName').value;
+    var fnameValue = document.getElementById('firstname').value;
     var mnameValue = document.getElementById('middlename').value;
     var aliasValue = document.getElementById('alias').value
     var mobileValue = document.getElementById('mobilenumber').value
@@ -66,14 +66,14 @@ function main(){
 
     //First Name
     if (fnameValue == "") {
-        setErrorFor('firstName', 'firstname-Invalid', 'First Name cannot be blank');
+        setErrorFor('firstname', 'firstname-Invalid', 'First Name cannot be blank');
         return false;
     }else{
         if (letters.test(fnameValue)){
-            setSuccessFor('firstName', 'firstname-Invalid');
+            setSuccessFor('firstname', 'firstname-Invalid');
           
           }else  {
-            setErrorFor('firstName', 'firstname-Invalid', 'First Name must not contain Number and Specail Characters');
+            setErrorFor('firstname', 'firstname-Invalid', 'First Name must not contain Number and Specail Characters');
              return false; 
            }      
     }
