@@ -1,48 +1,44 @@
 <?php
-$FamilyName = $_POST['Family Name'];
-$FirstName = $_POST['First Name'];
-$MI = $_POST['Middle Name'];
+
+$FamilyName = $_POST['FamilyName'];
+$FirstName = $_POST['FirstName'];
+$MI = $_POST['MiddleName'];
 $Alias = $_POST['Alias'];
-$MN = $_POST['Mobile Number'];
-$BPlace = $_POST['Birthplace'];
+$MN = $_POST['MobileNumber'];
+$BPlace = $_POST['BirthPlace'];
 $Nat = $_POST['Nationality'];
 $Rel = $_POST['Religion'];
 $Occu = $_POST['Occupation'];
-$CivStat = $_POST['Civil Status'];
+$CivStat = $_POST['CivilStatus'];
 $Sex = $_POST['Sex'];
-$BDay = $_POST['Birth Day'];
-$FMarks = $_POST['Face Marks'];
-$SpName = $_POST['Spouse Name'];
-$SpOccu = $_POST['Spouse Occupation'];
-$VStat = $_POST['Voter Status'];
-$VStat2 = $_POST['Voter Status 2'];
-$CAddress = $_POST['City Address'];
-$PAddress = $_POST['Provincial Address'];
-$Email = $_POST['Email Address'];
+$BDay = $_POST['BirthDay'];
+$FMarks = $_POST['FaceMarks'];
+$SpName = $_POST['SpouseName'];
+$SpOccu = $_POST['SpouseOccupation'];
+$VStat = $_POST['VoterStatus'];
+$VoteStat = $_POST['VoteStat'];
+$CAddress = $_POST['CityAddress'];
+$PAddress = $_POST['ProvincialAddress'];
+$Email = $_POST['EmailAddress'];
+
+	insertRecord($FamilyName, $FirstName, $MI, $Alias, $MN, $BPlace, $Nat, $Rel, $Occu, $CivStat, $Sex, $BDay, $FMarks, $SpName, $SpOccu, $VStat, $VoteStat, $CAddress, $PAddress, $Email );
 
 
-
-	insertRecord($FamilyName, $FirstName, $MI, $Alias, $MN, $BPlace, $Nat, $Rel, $Occu, $CivStat, $Sex, $BDay, $FMarks, $SpName, $SpOccu, $VStat, $VStat2, $CAddress, $PAddress, $Email );
-
-
-
-
-
-function insertRecord($FamilyName, $FirstName, $MI, $Alias, $MN, $BPlace, $Nat, $Rel, $Occu, $CivStat, $Sex, $BDay, $FMarks, $SpName, $SpOccu, $VStat, $VStat2, $CAddress, $PAddress, $Email ); {
+function insertRecord($FamilyName, $FirstName, $MI, $Alias, $MN, $BPlace, $Nat, $Rel, $Occu, $CivStat, $Sex, $BDay, $FMarks, $SpName, $SpOccu, $VStat, $VoteStat, $CAddress, $PAddress, $Email ) {
 require  "Database.php";
 
-$command = "SELECT * FROM ResidentInfo ";
+$command = "SELECT * FROM residentinfo Where FamilyName = ?";
 $stmt = $conn->prepare($command);
-$stmt->execute([$username]);
+$stmt->execute([$FamilyName]);
 
 if ($stmt->rowCount() == 0){
 	try {
  
-		$sql = "INSERT INTO ResidentInfo (Family Name, First Name, Middle Name, Alias, Mobile Number, Birthplace, Nationality, Religion, Occupation, Civil Status, Sex, Birthday, Face Marks, Spouse Name, Spouse Occupation, Voter Status, Voter Status Yes, City Address, Provincial Address, Email Address ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql = "INSERT INTO residentinfo (FamilyName, FirstName, MI, Alias, MN, BPlace, Nat, Rel, Occu, CivStat, Sex, BDay, FMarks, SpName, SpOccu, VStat, VoteStat, CAddress, PAddress, Email) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		   
 		   
 		// use exec() because no results are returned 
-		   $conn->prepare($sql)->execute([$FamilyName, $FirstName, $MI, $Alias, $MN, $BPlace, $Nat, $Rel, $Occu, $CivStat, $Sex, $BDay, $FMarks, $SpName, $SpOccu, $VStat, $VStat2, $CAddress, $PAddress, $Email]);
+		   $conn->prepare($sql)->execute([$FamilyName, $FirstName, $MI, $Alias, $MN, $BPlace, $Nat, $Rel, $Occu, $CivStat, $Sex, $BDay, $FMarks, $SpName, $SpOccu, $VStat, $VoteStat, $CAddress, $PAddress, $Email]);
 	  
 	  
 		echo '<script>
