@@ -13,8 +13,12 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../dist/css/sb-admin-3.css">
+
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+ 
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -205,22 +209,27 @@
               <div class="card-header" style="background-color: #007aff;">
                 <h3 class="card-title"  style="margin-left: 20px; color: #ffff;">Basic Information</h3>
               </div>
-			   <form  action = "Regs.php" method = "POST" >
               <!-- /.card-header -->
               <div class="card-body">
+                <form  action = "Regs.php" method = "POST">
                   <div class="row">
                     <div class="col-sm-6">
-					
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Family Name</label>
-                        <input type="text" class="form-control" placeholder=" Enter your Family Name " id="FamilyName" name="FamilyName">
-                      </div>
+                          <label>Family Name</label>
+                          <input type="text" class="form-control" placeholder=" Enter your Family Name " id="familyname" name="familyname" autocomplete="off">
+                          <div class="invalid-tooltip" id="familyname-Invalid">
+                
+                          </div>
+                        </div>                  
                     </div>
+
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>First Name</label>
-                        <input type="text" class="form-control" placeholder=" Enter your First Name " id="FirstName" name="FirstName">
+                        <input type="text" class="form-control" placeholder=" Enter your First Name " id="firstname" name="firstName" autocomplete="off">
+                        <div class="invalid-tooltip" id="firstname-Invalid">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -229,13 +238,18 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Middle Name</label>
-                        <input type="text" class="form-control" placeholder=" Enter your Middle Name"  id="MiddleName" name="MiddleName">
+                        <input type="text" class="form-control" placeholder=" Enter your Middle Name (OPTIONAL)"  id="middlename" name="middlename" autocomplete="off">
+                        <div class="invalid-tooltip" id="middlename-Invalid">
+                        </div>
                       </div>
                     </div>
+
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Alias</label>
-                        <input type="text" class="form-control" placeholder=" Enter your Alias "  id="Alias"  name="Alias">
+                        <input type="text" class="form-control" placeholder=" Enter your Alias (OPTIONAL) "  id="alias"  name="alias" autocomplete="off">
+                        <div class="invalid-tooltip" id="alias-Invalid">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -244,13 +258,17 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Mobile Number</label>
-                        <input type="text" class="form-control" placeholder=" Enter your Mobile Number "  id="MobileNumber" name="MobileNumber">
+                        <input type="text" class="form-control" placeholder=" Enter your Mobile Number "  id="mobilenumber" name="mobilenumber" autocomplete="off">
+                        <div class="invalid-tooltip" id="mobile-Invalid">
+                        </div>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Birth Place</label>
-                        <input type="text" class="form-control" placeholder=" Enter your Birth Place " id="BirthPlace" name="BirthPlace">
+                        <input type="text" class="form-control" placeholder=" Enter your Birth Place " id="birthplace" name="birthplace" autocomplete="off">
+                        <div class="invalid-tooltip" id="birthplace-Invalid">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -259,13 +277,17 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Nationality</label>
-                        <input type="text" class="form-control" placeholder="Enter your Nationality"  id="Nationality" name="Nationality">
+                        <input type="text" class="form-control" placeholder="Enter your Nationality"  id="nationality" name="nationality" autocomplete="off">
+                        <div class="invalid-tooltip" id="nationality-Invalid">
+                        </div>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Religion / Belief</label>
-                        <input type="text" class="form-control" placeholder="Enter your Religion" id="Religion" name="Religion" >
+                        <input type="text" class="form-control" placeholder="Enter your Religion" id="religion" name="religion" autocomplete="off">
+                        <div class="invalid-tooltip" id="religion-Invalid">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -276,7 +298,7 @@
                     <div class="col-sm-6">
                   <div class="form-group">
                     <label>Occupation</label>
-                    <select class="form-control" placeholder=" " id="Occupation" name="Occupation" >
+                    <select class="form-control" placeholder=" " id="occupation" name="occupation" autocomplete="off">
                       <option value="1">Private</option>
 							        <option value="2">Public</option>
 							        <option value="3">Government</option>
@@ -289,13 +311,13 @@
 							        <option value="10">Solo Parent</option>
 							        <option value="11">Indigenous People (IP)</option>
 							        <option value="12">Others</option>
-						          </select>
+                      </select>
                    </div>
                   </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Civil Status</label>
-                    <select class="form-control" id="CivilStatus" name="CivilStatus">
+                    <select class="form-control" id="CivilStatus" name="CivilStatus" autocomplete="off">
                       <option>Single</option>
                       <option>Married</option>
                       <option>Separated</option>
@@ -310,7 +332,7 @@
                 <div class="col-sm-6">
               <div class="form-group">
                 <label >Sex</label>
-                <select class="form-control" id="Sex" name="Sex">
+                <select class="form-control" id="Sex" name="Sex" autocomplete="off">
                   <option value="1">Male</option>
                   <option value="2">Female</option>
                   </select>
@@ -319,7 +341,7 @@
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Birthdate</label><br>
-                    <input type="date" style="margin-left: 1px; margin-top: 5px;" id = "BirthDay" name = "BirthDay"  >
+                    <input type="date" style="margin-left: 1px; margin-top: 5px;" id = "birthday" name = "birthday"  autocomplete="off">
                     </div>
                     </div>
                   </div>
@@ -327,7 +349,9 @@
                   
                     <div class="form-group">
                       <label>Face Marks</label>
-                      <input type="text" class="form-control" placeholder="Enter Your Face Marks" id="FaceMarks" name="FaceMarks">
+                      <input type="text" class="form-control" placeholder="Enter Your Face Marks (OPTIONAL)" id="facemarks" name="facemarks" autocomplete="off">
+                      <div class="invalid-tooltip" id="facemarks-Invalid">
+                      </div>
                     </div>
                   
 
@@ -336,38 +360,32 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Spouse's Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your Spouse Name " id="SpouseName " name="SpouseName">
+                        <input type="text" class="form-control" placeholder="Enter your Spouse Name " id="spname" name="spname" autocomplete="off">
+                        <div class="invalid-tooltip" id="spousename-Invalid">
+                      </div>
                       </div>
                     </div>
+
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Spouse's Occupation</label>
-                        <input type="text" class="form-control" placeholder="Enter your Spouse Occupation" id="SpouseOccupation" name="SpouseOccupation">
+                        <input type="text" class="form-control" placeholder="Enter your Spouse Occupation" id="spoccu" name="spoccu" autocomplete="off">
+                        <div class="invalid-tooltip" id="spoccu-Invalid">
+                        </div>
                       </div>
                     </div>
                   </div>
 
 
-                  <div class="row">
-                  <div class="col-sm-6">
                   <div class="form-group">
                     <label >Voter Status</label>
-                    <select class="form-control" id="VoterStatus" name="VoterStatus">
+                    <select class="form-control" id="voter" name="voter" autocomplete="off">
                       <option value="1">Yes</option>
                       <option value="2">No</option>
                       </select>
                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <label >Voter Status (If Yes)</label>
-                      <select class="form-control" id="VoteStat" name="VoteStat">
-                        <option value="1">Active</option>
-                        <option value="2">Inactive</option>
-                        </select>
-                     </div>
-                    </div>
-                  </div>
+                
+                  
 
 
                   <div class="card-header">
@@ -377,29 +395,35 @@
 
                   <div class="form-group">
                     <label>City Address</label>
-                    <input type="text" class="form-control" placeholder="Enter Your City Address" id="CityAddress" name="CityAddress">
+                    <input type="text" class="form-control" placeholder="Enter Your City Address" id="cityadd" name="cityadd" autocomplete="off">
+                    <div class="invalid-tooltip" id="cityadd-Invalid">
+                    </div>
                   </div>
 
                   <div class="form-group">
                     <label>Provincial Address</label>
-                    <input type="text" class="form-control" placeholder="Enter your Provincial Address " id="ProvincialAddress" name="ProvincialAddress">
+                    <input type="text" class="form-control" placeholder="Enter your Provincial Address " id="provadd" name="provadd" autocomplete="off">
+                    <div class="invalid-tooltip" id="provadd-Invalid">
+                    </div>
+                 
                   </div>
 
             
                       <div class="form-group">
                         <label>Email Address</label>
-                        <input type="text" class="form-control" placeholder="Enter Your Email Address" id="EmailAddress" name="EmailAddress">
+                        <input type="text" class="form-control" placeholder="Enter Your Email Address" id="emd" name="emd" autocomplete="off">
+                        <div class="invalid-tooltip" id="emailadd-Invalid">
+                        </div>
                       </div>
               
 
                   <br>
                   <div class="col-4">
-                    <button type="submit" class="btn btn-primary btn-block" style="width: 600px; margin-left: 65px;">Save New Resident</button>
+                    <input type="submit" name="logup" id="logup" value="Login" class="submit" class="btn btn-block btn-outline-primary btn-sm" style="width: 300px; height: 40px; margin-left: -240px; border-radius: 30px;" onclick="return main()">
                   </div>
               
-			
+
             </div>
-			</form>
             </div>
             </div>
             </div>
@@ -437,10 +461,11 @@ z
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-  bsCustomFileInput.init();
-});
-</script>
+
+
+
+<script src="../../valid.js"></script>
+
+
 </body>
 </html>
